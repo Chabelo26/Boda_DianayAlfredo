@@ -1,0 +1,757 @@
+/* THE SEASONS Font */
+@font-face {
+    font-family: 'The Seasons';
+    src: url('data:font/woff2;base64,') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Fallback to elegant serif for titles */
+.seasons-font {
+    font-family: 'The Seasons', 'Cormorant Garamond', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #FFEEB0;
+    --olive: #9C9C6A;
+    --white: #ffffff;
+    --brown: #9D7E61;
+    --text-dark: #4a4a4a;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--white);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 0 30px rgba(156, 156, 106, 0.1);
+    overflow: hidden;
+}
+
+/* Responsive Design for Desktop and Tablets */
+@media (min-width: 768px) {
+    body {
+        padding: 20px;
+        background: linear-gradient(135deg, var(--cream) 0%, rgba(255, 238, 176, 0.3) 100%);
+    }
+
+    .container {
+        max-width: 600px;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(156, 156, 106, 0.15);
+    }
+
+    .section {
+        padding: 40px 50px;
+    }
+}
+
+/* ================= HEADER ================= */
+.header {
+    height: 100vh;
+    min-height: 600px;
+    background: url("imagenes/11.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom,
+        rgba(0,0,0,0.2) 0%,
+        rgba(0,0,0,0.4) 50%,
+        rgba(0,0,0,0.6) 100%);
+    z-index: 1;
+}
+
+.header-content-top {
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px 20px 20px;
+    width: 100%;
+}
+
+.header-content-bottom {
+    position: relative;
+    z-index: 2;
+    padding: 20px 20px 60px 20px;
+    width: 100%;
+}
+
+.couple-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 7.5em;
+    font-weight: 400;
+    margin: 0;
+    color: var(--white);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    line-height: 1.2;
+}
+
+.names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 7.5em;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--white);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    line-height: 1.2;
+}
+
+.date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2em;              /* Cambié de 1.4em a 2em */
+    font-weight: 600;            /* Cambié de 500 a 600 para más énfasis */
+    letter-spacing: 4px;         /* Cambié de 3px a 4px */
+    margin-bottom: 30px;
+    color: var(--white);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* Sombra más fuerte */
+}
+
+.countdown {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.countdown-item {
+    flex: 1;
+}
+
+.countdown-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    display: block;
+    color: var(--white);
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.countdown-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75em;
+    font-weight: 400;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* ================= SECCIONES ================= */
+.section {
+    padding: 30px 25px;
+    position: relative;
+}
+
+.section.verde {
+    background: #9C9C6A;
+}
+
+.section.alt {
+    background: linear-gradient(45deg, var(--cream) 0%, rgba(255, 238, 176, 0.3) 100%);
+}
+
+.photo-placeholder {
+    display: none;
+}
+
+h2 {
+    font-family: 'The Seasons', 'Cormorant Garamond', serif;
+    font-size: 2.4em;
+    font-weight: 600;
+    color: var(--brown);
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--olive);
+    margin: 10px auto;
+}
+
+h3 {
+    font-family: 'The Seasons', 'Cormorant Garamond', serif;
+    font-size: 2.4em;
+    font-weight: 600;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--olive);
+    margin: 10px auto;
+}
+
+h4 {
+    font-family: 'The Seasons', 'Cormorant Garamond', serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--brown);
+    text-align: center;
+    margin-bottom: 0px;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.story {
+    text-align: justify;
+    font-family: 'Montserrat', serif;
+    font-size: 0.5 em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.story p {
+    margin-bottom: 15px;
+}
+
+/* ================= FOTO DE PAREJA (ANCHO COMPLETO) ================= */
+.couples-photo-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.couples-photo-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.couples-photo-section i {
+    display: none;
+}
+
+/* ================= UBICACIONES ================= */
+.location-item, .schedule-item {
+    background: var(--white);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left: 4px solid var(--olive);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.location-image-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, var(--cream), rgba(156, 156, 106, 0.2));
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.location-image-placeholder div {
+    width: 100%;
+    height: 100%;
+}
+
+.location-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.location-image-placeholder i {
+    display: none;
+}
+
+.location-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.location-icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: var(--brown);
+}
+
+.location-name {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--brown);
+}
+
+.location-time {
+    color: var(--olive);
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.location-link {
+    color: var(--brown);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 15px;
+    background: var(--cream);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.location-link:hover {
+    background: var(--olive);
+    color: var(--white);
+}
+
+/* ================= ITINERARIO ================= */
+.schedule-list {
+    list-style: none;
+}
+
+.schedule-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(156, 156, 106, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.schedule-list li:last-child {
+    border-bottom: none;
+}
+
+.schedule-time {
+    font-weight: 600;
+    color: var(--brown);
+    min-width: 80px;
+}
+
+/* ================= CÓDIGO DE VESTIMENTA ================= */
+.dress-code {
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.dress-item {
+    margin: 0;
+    padding: 0;
+}
+
+.dress-item img {
+    display: block; /* elimina espacio debajo de la imagen */
+    margin: 0 auto; /* opcional, centra la imagen */
+}
+
+
+.pinterest-link {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #9C9C6A;
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.pinterest-link:hover {
+    background: #9C9C6A;
+    transform: translateY(-2px);
+}
+
+.pinterest-link i {
+    margin-right: 8px;
+}
+
+.dress-title {
+    font-weight: 600;
+    color: var(--brown);
+    margin-bottom: 8px;
+}
+
+.dress-avoid {
+    color: #d63384;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* ================= BOTONES ================= */
+.cta-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: var(--brown);
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: 600;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(156, 156, 106, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(156, 156, 106, 0.4);
+}
+
+.cta-buttons {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: whitesmoke;
+    color: #9C9C6A;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: 600;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(156, 156, 106, 0.3);
+}
+
+.cta-buttons:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(156, 156, 106, 0.4);
+}
+
+/* ================= HOSPEDAJE ================= */
+.hotel-item {
+    background: var(--white);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid var(--cream);
+    position: relative;
+}
+
+.hotel-name {
+    font-weight: 600;
+    color: var(--brown);
+    margin-bottom: 5px;
+}
+
+/* ================= TURISMO (IMÁGENES UNIFORMES) ================= */
+.tourism-image-placeholder {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, var(--cream), rgba(156, 156, 106, 0.2));
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tourism-image-placeholder div {
+    width: 100%;
+    height: 100%;
+}
+
+.tourism-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tourism-image-placeholder i {
+    display: none;
+}
+
+/* ================= MENSAJE FINAL ================= */
+.final-message {
+    background: white;
+    color: var(--brown);
+    padding: 40px 25px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.final-message p {
+    font-family: 'Montserrat', serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    text-align: center;
+    background: var(--brown);
+    color: var(--white);
+    padding: 30px 25px;
+    font-size: 0.9em;
+}
+
+.footer-heart {
+    font-size: 1.5em;
+    color: var(--cream);
+    margin: 15px 0;
+}
+
+/* ================= ANIMACIONES ================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section:nth-child(odd) .fade-in {
+    animation-delay: 0.2s;
+}
+
+.section:nth-child(even) .fade-in {
+    animation-delay: 0.4s;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .couple-names {
+        font-size: 2.5em;
+    }
+    
+    .names {
+        font-size: 2.5em;
+    }
+
+    .date {
+        font-size: 1.4em;  /* En móvil: de 1em a 1.4em */
+    }
+
+    .countdown-container {
+        flex-direction: row;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .section {
+        padding: 25px 20px;
+    }
+
+    .couple-names {
+        font-size: 2em;
+    }
+
+    .names {
+        font-size: 2em;
+    }
+
+    .header {
+        min-height: 100vh;
+        background-attachment: scroll;
+    }
+
+    .countdown-number {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .couple-names {
+        font-size: 4.5em;
+    }
+
+    .names {
+        font-size: 4.5em;
+        margin-bottom: 20px;
+    }
+
+   .date {
+        font-size: 2.2em;  /* En pantallas grandes: de 1.6em a 2.2em */
+        margin-bottom: 40px;
+
+    .countdown {
+        padding: 25px;
+        max-width: 450px;
+    }
+
+    .countdown-number {
+        font-size: 3em;
+    }
+
+    .countdown-label {
+        font-size: 0.9em;
+    }
+
+    .final-message {
+        padding: 50px;
+    }
+
+    .final-message p {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 2.6em;
+        margin-bottom: 30px;
+    }
+
+    .story {
+        font-size: 1.2em;
+        line-height: 2;
+        max-width: 500px;
+        margin: 0 auto 25px auto;
+    }
+
+    .location-item, .schedule-item {
+        padding: 25px;
+        margin: 20px 0;
+    }
+
+    .dress-code {
+        padding: 25px;
+        margin: 20px 0;
+    }
+
+    .dress-item {
+        padding: 20px;
+    }
+
+    .hotel-item {
+        padding: 20px;
+        margin: 15px 0;
+    }
+
+    .footer {
+        padding: 40px 50px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .locations-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .dress-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .hotels-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .tourism-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .section {
+        padding: 50px 60px;
+    }
+
+    .header {
+        padding: 60px 60px 40px 60px;
+    }
+
+    .couple-names {
+        font-size: 5.2em;
+    }
+
+    .names {
+        font-size: 5.2em;
+    }
+
+    .final-message {
+        padding: 60px;
+    }
+
+    .final-message p {
+        font-size: 1.8em;
+    }
+
+    .location-image-placeholder {
+        height: 250px;
+    }
+
+    .tourism-image-placeholder {
+        height: 300px;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    .story {
+        font-size: 1.3em;
+    }
+}
