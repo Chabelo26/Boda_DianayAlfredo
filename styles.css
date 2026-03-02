@@ -63,7 +63,7 @@ body {
 .header {
     height: 100vh;
     min-height: 600px;
-    background: url("imagenes/11.jpg");
+    background: url("11.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -623,7 +623,7 @@ h4 {
         font-size: 4.5em;
         margin-bottom: 20px;
     }
-
+}
    .date {
         font-size: 2.2em;  /* En pantallas grandes: de 1.6em a 2.2em */
         margin-bottom: 40px;
